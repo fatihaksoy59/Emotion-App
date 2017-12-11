@@ -139,7 +139,9 @@ public class PhotoActivity extends AppCompatActivity {
                 mDialog.dismiss();
                 for(RecognizeResult res: recognizeResults){
                     String status= getEmotion(res);
-                    Log.e("Sob",status);
+                    Intent intent=new Intent(getApplicationContext(),TestActivity.class);
+                    intent.putExtra("Deger",status);
+                    startActivity(intent);
 
                 }
             }
@@ -186,7 +188,7 @@ public class PhotoActivity extends AppCompatActivity {
 
         double maxNum=list.get(list.size()-1);
 
-        Toast.makeText(this,list.toString(),Toast.LENGTH_SHORT).show();
+
 
         if(maxNum==scores.anger) {
             return "Öfkeli";
@@ -206,6 +208,5 @@ public class PhotoActivity extends AppCompatActivity {
         {
             return "Şaşırmış";
         }
-
     }
 }

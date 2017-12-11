@@ -11,9 +11,9 @@ public class MusicModel {
 
 
 
-    private String mySongLocation;
+    private int mySongLocation;
 
-    public MusicModel(String song,String artist,String durationTime,String mySongLocation){
+    public MusicModel(String song,String artist,String durationTime,int mySongLocation){
         super();
         this.song=song;
         this.artist=artist;
@@ -47,11 +47,11 @@ public class MusicModel {
     public void setDurationTime(String durationTime) {
         this.durationTime = durationTime;
     }
-    public String getMySongLocation() {
+    public int getMySongLocation() {
         return mySongLocation;
     }
 
-    public void setMySongLocation(String mySongLocation) {
+    public void setMySongLocation(int mySongLocation) {
         this.mySongLocation = mySongLocation;
     }
 
